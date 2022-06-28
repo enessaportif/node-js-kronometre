@@ -1,5 +1,26 @@
 {
   "dependencies": {
-    "express": "^4.18.1"
-  }
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "nodemon": "^2.0.18"
+  },
+  "name": "js-kronometre",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enessaportif/node-js-kronometre.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enessaportif/node-js-kronometre/issues"
+  },
+  "homepage": "https://github.com/enessaportif/node-js-kronometre#readme"
 }
