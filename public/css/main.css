@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: unset;
+  display: block;
+  text-decoration: none;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/bg-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-container {
+  padding: 2em;
+  font-size: 2em;
+  border-radius: 1em;
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  margin: 1em 0;
+}
+.timer {
+  text-align: center;
+  padding: 3em;
+  margin: 1em 0;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  border-radius: 1em;
+}

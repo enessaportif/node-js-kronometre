@@ -1,13 +1,9 @@
-const path = require('path');
-
 const express = require('express');
 
 const router = express.Router();
 
-router.use('/counter', (req, res, next) => {
-
-  res.sendFile(path.join(__dirname, '../', 'views', 'counter.html'));
-
+router.use('/counter', (req, res) => {
+  res.render("counter",{layout:false});
 });
 
 module.exports = router;

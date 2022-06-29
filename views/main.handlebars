@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Clock App</title>
+  </head>
+  <body>
+    <div class="container" style="width: 40%;">
+      <div style="width: 100%;">
+        <div class="clock-container" style="text-align:center">
+          <h1 id="clock"></h1>
+        </div>
+      </div>
+      <div
+        style="width: 100%;display:flex;justify-content:space-between;align-items:center"
+      >
+        <div class="timer">
+          <a href="/counter">
+            <img
+              width="200em"
+              src="./img/timer.svg"
+              alt="timer-icon"
+              style="margin-bottom: 1em;"
+            />
+            <h1>Counter</h1>
+          </a>
+        </div>
+        <div class="timer">
+          <a href="/timer">
+            <img
+              width="200em"
+              src="./img/stopwatch.svg"
+              alt="stopwatch-icon"
+              style="margin-bottom: 1em;"
+            />
+            <h1>Stopwatch</h1>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script src="./js/time.js"></script>
+</html>

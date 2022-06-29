@@ -2,13 +2,16 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
-// const expressHbs = require('express-handlebars');
-
-// app.engine('hbs', expressHbs());
-
-// app.set('view engine','hbs');
-
+const expressHbs = require('express-handlebars');
 const app = express();
+
+app.engine('handlebars', expressHbs.engine());
+app.set('view engine', 'handlebars');
+app.use(express.static('public'))
+app.get('/', (req, res) => {
+  res.render('main', {layout : false});
+});
+
 
 const counterRoutes = require('./routes/counter');
 const timerRoutes = require('./routes/timer');
