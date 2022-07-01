@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="./css/stopwatch.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="stopwatch">{{{data}}}</h1>
+    <div class="start-or-pause">
+      <button id="start-btn">Start</button>
+      <button id="pause-btn" style= "display: none">Stop</button>
+    </div>
+    <div class="reset-or-lap">
+      <button id="reset-btn" style= "display: none">Reset</button>
+      <button id="lap-btn" disabled>Lap</button>
+    </div>
+    <div class="laps">
+      <ul id="laps-ul">
+      </ul>
+    </div>
+  </div>
+</body>
+<script src="./js/stopwatchApplication.js"></script>
+</html>

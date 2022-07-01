@@ -10,13 +10,13 @@ app.set("view engine", "handlebars");
 app.use(express.static("public"));
 
 const counterRoutes = require("./routes/counter");
-const timerRoutes = require("./routes/timer");
+const stopwatchRoutes = require("./routes/stopwatch");
 const mainRoutes = require("./routes/main");
 app.use(bodyParser.text({ type: "text/plain" }));
 
 app.use(counterRoutes);
 
-app.use(timerRoutes);
+app.use(stopwatchRoutes);
 
 app.use(mainRoutes);
 

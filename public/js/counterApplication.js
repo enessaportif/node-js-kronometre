@@ -2,7 +2,7 @@ let counterHour;
 let counterMinute;
 let counterSecond;
 let counter = document.getElementById("counter").innerText;
-let pauseChecker = 9999;
+let pauseChecker;
 let xhr = new XMLHttpRequest();
 if (counter) {
   displayCounter();
@@ -11,7 +11,7 @@ function displayCounter() {
   //time type'ına dönüştürmeden önce böyle deneyeyim dedim
   document.getElementById("counter").innerText = counter;
   counter = `${counterHour} : ${counterMinute} : ${counterSecond}`;
-  if (pauseChecker === 1) {
+  if (pauseChecker) {
     return;
   }
   counterSecond = counterSecond - 1;
@@ -22,6 +22,8 @@ function displayCounter() {
       counterMinute = 59;
       counterHour = counterHour - 1;
       if (counterHour < 0 && counterMinute == 59 && counterSecond == 59) {
+        document.getElementById("pause-btn").style = "display: none";
+        document.getElementById("submit-time-btn").style = "display: inline";
         return;
       }
     }
@@ -39,6 +41,11 @@ document.getElementById("submit-time-btn").addEventListener("click", () => {
   counterHour = document.getElementById("input-hour").value
     ? document.getElementById("input-hour").value
     : 0;
+
+  if(counterHour < 0 || counterHour > 23 || counterMinute < 0 || counterMinute > 59 || counterSecond < 0 || counterSecond > 59){
+    alert("Please enter a valid time!");
+    return;
+  }
   counter = `${counterHour} : ${counterMinute} : ${counterSecond}`;
   xhr.open("POST", "http://localhost:1000/counter");
 
@@ -46,15 +53,33 @@ document.getElementById("submit-time-btn").addEventListener("click", () => {
   xhr.setRequestHeader("Content-Type", "text/plain");
   console.log(counter);
   xhr.send(counter);
-  pauseChecker = 0;
+  pauseChecker = false;
   displayCounter();
+  document.getElementById("submit-time-btn").style = "display: none";
+  document.getElementById("pause-btn").style = "display: inline";
+  document.getElementById("reset-btn").style = "display: inline";
 });
 
 document.getElementById("resume-btn").addEventListener("click", () => {
-  pauseChecker = 0;
+  pauseChecker = false;
   displayCounter();
+  document.getElementById("pause-btn").style = "display: inline";
+  document.getElementById("resume-btn").style = "display: none";
 });
 
 document.getElementById("pause-btn").addEventListener("click", () => {
-  pauseChecker = 1;
+  pauseChecker = true;
+  document.getElementById("pause-btn").style = "display: none";
+  document.getElementById("resume-btn").style = "display: inline";
+});
+
+document.getElementById("reset-btn").addEventListener("click", () => {
+  document.getElementById("submit-time-btn").style = "display: inline";
+  document.getElementById("pause-btn").style = "display: none";
+  document.getElementById("resume-btn").style = "display: none";
+  document.getElementById("reset-btn").style = "display: none";
+  counter = "";
+  pauseChecker = true;
+  xhr.open("POST", "http://localhost:1000/counter");
+  xhr.send(counter);
 });

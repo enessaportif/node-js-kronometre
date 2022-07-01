@@ -80,7 +80,7 @@ body{
   text-align: center;
 }
 
-#submit-time-btn{
+#submit-time-btn, #pause-btn, #resume-btn{
   width: 40px;
   height: 20px;
   margin-top: 10px;
