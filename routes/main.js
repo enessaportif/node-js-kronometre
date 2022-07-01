@@ -1,11 +1,9 @@
-const express = require('express');
+const express = require("express");
 
 const router = express.Router();
 
-router.use('/', (req, res, next) => {
-
-  res.sendFile(path.join(__dirname, '../', 'views', 'main.html'));
-
+router.get("/", (req, res) => {
+  res.render("main", { layout: false });
 });
 
 module.exports = router;
