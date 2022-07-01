@@ -17,7 +17,6 @@ body{
 }
 
 .container{
-  background-color: red;
   width: 40%;
   margin: 100px auto;
   border-radius: 1em;
@@ -25,13 +24,40 @@ body{
   background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
 }
 
-#input-container{
+#inputs-container{
+
+  margin: auto;
+  margin-top: 75px;
+  text-align: center;
+}
+
+#hours-container{
 
   padding-top: 5px;
   height: 100px;
   width: 50px;
   margin: auto;
-  margin-top: 75px;
+  display: inline;
+
+}
+
+#minutes-container{
+
+  padding-top: 5px;
+  height: 100px;
+  width: 50px;
+  margin: auto;
+  display: inline;
+
+}
+
+#seconds-container{
+
+  padding-top: 5px;
+  height: 100px;
+  width: 50px;
+  margin: auto;
+  display: inline;
 
 }
 
@@ -39,18 +65,23 @@ body{
   text-align: center;
   justify-content: center;
   height: 50px;
-  margin-top: 50px ;
+  margin-top: 75px;
   margin: auto;
 }
 
-#input-time{
+#input-hour, #input-minute, #input-second{
  
   width: 100px;
   height: 25px;
 
 }
 
+#btn-div{
+  text-align: center;
+}
+
 #submit-time-btn{
   width: 40px;
   height: 20px;
+  margin-top: 10px;
 }

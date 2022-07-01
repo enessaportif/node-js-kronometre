@@ -10,9 +10,25 @@
 <body>
  
   <div class="container">
-    <div id="input-container">
-      <input type="number" id="input-time" name="input-time">
-      <button id="submit-time-btn" type="submit"></button>
+    <div id="inputs-container">
+      <div id="hours-container">
+        <input type="number" placeholder= "hours" id="input-hour" name="input-hour">
+      </div>
+      <div id="minutes-container">
+        <input type="number" placeholder= "minutes" id="input-minute" name="input-minute">
+      </div>
+      <div id="seconds-container">
+        <input type="number" placeholder= "seconds" id="input-second" name="input-second">
+      </div>
+    </div>
+    <div id="btn-div">
+      <button id="submit-time-btn" type="submit">Start</button>
+    </div>
+     <div id="btn-div">
+      <button id="pause-btn" type="submit">Pause</button>
+    </div>
+     <div id="btn-div">
+      <button id="resume-btn" type="submit">Resume</button>
     </div>
     <div id="counter-container">
       <h1 id="counter">0</h1>
