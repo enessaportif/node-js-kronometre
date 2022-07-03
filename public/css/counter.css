@@ -1,11 +1,10 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../img/bg-img.jpg");
   background-position: center;
@@ -16,7 +15,7 @@ body{
   align-items: center;
 }
 
-.container{
+.container {
   width: 40%;
   margin: 100px auto;
   border-radius: 1em;
@@ -24,64 +23,53 @@ body{
   background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
 }
 
-#inputs-container{
-
+#inputs-container {
   margin: auto;
   margin-top: 75px;
   text-align: center;
 }
 
-#hours-container{
-
+#hours-container {
   padding-top: 5px;
-  height: 100px;
-  width: 50px;
-  margin: auto;
-  display: inline;
 
+  display: inline;
 }
 
-#minutes-container{
-
+#minutes-container {
   padding-top: 5px;
-  height: 100px;
-  width: 50px;
-  margin: auto;
   display: inline;
-
 }
 
-#seconds-container{
-
+#seconds-container {
   padding-top: 5px;
-  height: 100px;
-  width: 50px;
-  margin: auto;
   display: inline;
-
 }
 
-#counter-container{
+#counter-container {
   text-align: center;
   justify-content: center;
-  height: 50px;
-  margin-top: 75px;
-  margin: auto;
+  /* height: 50px;
+  margin-top: 75px; */
 }
 
-#input-hour, #input-minute, #input-second{
- 
-  width: 100px;
-  height: 25px;
-
+#input-hour,
+#input-minute,
+#input-second {
+  padding: 0.5em 1em;
 }
 
-#btn-div{
+#btn-div {
   text-align: center;
 }
 
-#submit-time-btn, #pause-btn, #resume-btn{
-  width: 40px;
-  height: 20px;
+#submit-time-btn,
+#pause-btn,
+#reset-btn,
+#resume-btn {
+  padding: 0.5em 1em;
   margin-top: 10px;
+}
+
+#reset-btn {
+  margin-bottom: 1em;
 }

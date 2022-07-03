@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../img/bg-img.jpg");
   background-position: center;
@@ -15,10 +15,24 @@ body{
   align-items: center;
 }
 
-.container{
+.container {
   width: 40%;
   margin: 100px auto;
   border-radius: 1em;
   height: 40%;
   background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#start-btn,
+#reset-btn,
+#lap-btn,
+#pause-btn {
+  padding: 0.5em 1em;
+  margin-top: 10px;
+}
+#lap-btn {
+  margin-bottom: 10px;
 }
